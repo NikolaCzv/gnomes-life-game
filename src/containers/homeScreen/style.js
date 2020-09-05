@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from '../../utils/colors';
 
 export const Container = styled.div`
     width: 100%;
@@ -7,7 +8,7 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #90EE90;
+    background-color: ${colors.mainColor};
     border-radius: 20px;
 `
 
@@ -16,7 +17,7 @@ export const GameContainer = styled.div`
     height: 60vh;
     border-radius: 20px;
     display: flex;
-    background-color: white;
+    background-color: ${colors.white};
 `
 
 export const Title = styled.h1`
