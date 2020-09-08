@@ -19,3 +19,6 @@ export const ButtonWrapper = styled.div`
     padding: 140px;
     margin-top: 50px;
 `
+export const Health = styled.div`
+    font-size: 20px;
+`
