@@ -10,6 +10,7 @@ const FirstScreen = props => {
     const handleLeftButton = () => {
         setIsLeft(true);
     }
+    //aaa
 
     if(isLeft)
     return <FirstLeft energy={props.energy}/>
