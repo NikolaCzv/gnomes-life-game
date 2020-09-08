@@ -10,7 +10,10 @@ const FirstScreen = props => {
     const handleLeftButton = () => {
         setIsLeft(true);
     }
-    //aaa
+    
+    //create right button handler
+    //create new component for firstRight
+    //dont need to render much
 
     if(isLeft)
     return <FirstLeft energy={props.energy}/>
