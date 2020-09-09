@@ -10,7 +10,7 @@ const FirstScreen = props => {
     const handleLeftButton = () => {
         setIsLeft(true);
     }
-    
+
     //create right button handler
     //create new component for firstRight
     //dont need to render much
@@ -45,8 +45,5 @@ const FirstScreen = props => {
         </Container>
     );
 };
-    //render text for the first screen
-    //dva dugmeta, levo i desno ... ista boja
-
 
 export default FirstScreen;
