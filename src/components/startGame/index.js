@@ -50,7 +50,7 @@ const StartGame = (props) => {
                     :
                     <>
                         <QuestText>
-                            Good job, you waisted your time, a solid 8 secounds. If you change your mind you can just press the button below and you'll be back at the main screen.
+                            Good job, you waisted your time, a solid 8 seconds. If you change your mind you can just press the button below and you'll be back at the main screen.
                         </QuestText>
                         <ButtonWrapper>
                             <Button 
