@@ -12,6 +12,7 @@ const FirstScreen = props => {
     const handleLeftButton = () => {
         setIsLeft(true);
     }
+
     const handleRightButton = () => {
         setIsRight(true)
     }
@@ -19,6 +20,7 @@ const FirstScreen = props => {
     
     if(isRight)
     return <FirstRight energy={props.energy}/>
+      
     if(isLeft)
     return <FirstLeft energy={props.energy}/>
 
@@ -50,7 +52,5 @@ const FirstScreen = props => {
         </Container>
     );
 };
-
-
 
 export default FirstScreen;
