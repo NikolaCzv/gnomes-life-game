@@ -2,19 +2,25 @@ import React, { useState } from "react";
 import { Container, QuestText, ButtonWrapper, Health } from '../style';
 import Button from '@material-ui/core/Button';
 import FirstLeft from '../firstLeft';
+import FirstRight from '../FirstRight';
 
 
 const FirstScreen = props => {
     const [isLeft, setIsLeft] = useState(false);
+    const [isRight, setIsRight] = useState(false)
 
     const handleLeftButton = () => {
         setIsLeft(true);
     }
 
-    //create right button handler
-    //create new component for firstRight
-    //dont need to render much
-
+    const handleRightButton = () => {
+        setIsRight(true)
+    }
+    
+    
+    if(isRight)
+    return <FirstRight energy={props.energy}/>
+      
     if(isLeft)
     return <FirstLeft energy={props.energy}/>
 
@@ -38,6 +44,7 @@ const FirstScreen = props => {
                 <Button
                     variant="contained" 
                     color="primary"
+                    onClick={handleRightButton}
                 >
                     Right
                 </Button>
