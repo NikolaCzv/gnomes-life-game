@@ -8,7 +8,7 @@ class HomeScreen extends React.Component {
     state = {
         energy: 100,
         name: "Gnomes's Life"
-    }
+    };
 
     render(){
         return(

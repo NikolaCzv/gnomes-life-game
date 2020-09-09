@@ -7,17 +7,11 @@ const StartGame = (props) => {
     const [isNotPlaying, setIsNotPlaying] = useState(true);
     const [startGame, setStartGame] = useState(false);
 
-    const handleNoButton = () => {
-        setIsNotPlaying(false);
-    }
+    const handleNoButton = () => setIsNotPlaying(false);
 
-    const handleYesButton = () => {
-        setStartGame(true);
-    }
+    const handleYesButton = () => setStartGame(true);
     
-    const handleJokeButton = () => {
-        setIsNotPlaying(true);
-    }
+    const handleJokeButton = () => setIsNotPlaying(true);
 
     if(startGame)
         return <FirstScreen energy={props.energy} />

@@ -6,7 +6,7 @@ const FirstLeft = props => {
  return(  
     <Container>
         <Health>
-            Energy: {props.energy} 
+            Gnome's Energy: {props.energy} ❤️
         </Health>
         <QuestText>
             As our hero proceeds left he comes to a stunning halt near a giant snake. But to his surprise the snake is actually a really nice guy, not the smartest however.

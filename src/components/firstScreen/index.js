@@ -2,20 +2,16 @@ import React, { useState } from "react";
 import { Container, QuestText, ButtonWrapper, Health } from '../style';
 import Button from '@material-ui/core/Button';
 import FirstLeft from '../firstLeft';
-import FirstRight from '../FirstRight';
+import FirstRight from '../firstRight';
 
 
 const FirstScreen = props => {
     const [isLeft, setIsLeft] = useState(false);
     const [isRight, setIsRight] = useState(false)
 
-    const handleLeftButton = () => {
-        setIsLeft(true);
-    }
+    const handleLeftButton = () => setIsLeft(true);
 
-    const handleRightButton = () => {
-        setIsRight(true)
-    }
+    const handleRightButton = () => setIsRight(true);
     
     
     if(isRight)
@@ -27,7 +23,7 @@ const FirstScreen = props => {
     return(
         <Container>
             <Health>
-                Energy: {props.energy} 
+                Gnome's Energy: {props.energy} ❤️
             </Health>
             <QuestText>
                 After a long night the gnome, dazed, wakes ups in the middle of a forrest opening.

@@ -10,7 +10,7 @@ export const Container = styled.div`
     align-items: center;
     background-color: ${colors.mainColor};
     border-radius: 20px;
-`
+`;
 
 export const GameContainer = styled.div`
     width: 70%;
@@ -18,8 +18,8 @@ export const GameContainer = styled.div`
     border-radius: 20px;
     display: flex;
     background-color: ${colors.white};
-`
+`;
 
 export const Title = styled.h1`
     font-size: 44px;
-`
+`;
