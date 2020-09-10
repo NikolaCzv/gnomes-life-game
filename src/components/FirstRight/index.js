@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, QuestText, ButtonWrapper, Health } from '../style';
 import Button from '@material-ui/core/Button';
 import OwlGently from '../owlGently';
