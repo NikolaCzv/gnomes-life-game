@@ -14,7 +14,7 @@ const StartGame = (props) => {
     const handleJokeButton = () => setIsNotPlaying(true);
 
     if(startGame)
-        return <FirstScreen energy={props.energy} />
+        return <FirstScreen energy={props.energy} setEnergy={props.setEnergy} />
         
         return(
             <Container>
