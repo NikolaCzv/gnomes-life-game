@@ -15,10 +15,10 @@ const FirstScreen = props => {
     
     
     if(isRight)
-    return <FirstRight energy={props.energy}/>
+    return <FirstRight energy={props.energy} setEnergy={props.setEnergy}/>
       
     if(isLeft)
-    return <FirstLeft energy={props.energy}/>
+    return <FirstLeft energy={props.energy} setEnergy={props.setEnergy}/>
 
     return(
         <Container>

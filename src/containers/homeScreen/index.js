@@ -1,25 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, GameContainer, Title } from './style';
 
 import StartGame from '../../components/startGame';
 
-class HomeScreen extends React.Component {
+const HomeScreen = () => {
 
-    state = {
-        energy: 100,
-        name: "Gnomes's Life"
-    };
+        const [energy, setEnergy] = useState(100);
 
-    render(){
         return(
             <Container>
-                <Title>{this.state.name}</Title>
+                <Title>Gnomes's Life</Title>
                 <GameContainer>
-                    <StartGame energy={this.state.energy}/>
+                    <StartGame energy={energy} setEnergy={setEnergy}/>
                 </GameContainer>
             </Container>
         );
-    }
 };
 
 export default HomeScreen;
