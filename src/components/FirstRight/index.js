@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container, QuestText, ButtonWrapper, Health } from '../style';
 import Button from '@material-ui/core/Button';
 import OwlGently from '../owlGently';
@@ -31,10 +31,11 @@ const FirstRight = props => {
     if(isScreem)
     return <OwlScreem energy={props.energy}/>
 
+      
  return(  
     <Container>
         <Health>
-            Gnome's Energy: {props.energy} ❤️
+            Energy: {props.energy} 
         </Health>
         <QuestText>
             Oh, finally to meet someone after a rough night. There is an owl. She is sleeping. The owl 
@@ -67,5 +68,6 @@ const FirstRight = props => {
     </Container>
  );
 };
+
 
 export default FirstRight;
