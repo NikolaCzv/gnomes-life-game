@@ -5,16 +5,16 @@ import StartGame from '../../components/startGame';
 
 const HomeScreen = () => {
 
-        const [energy, setEnergy] = useState(100);
+    const [energy, setEnergy] = useState(100);
 
-        return(
-            <Container>
-                <Title>Gnomes's Life</Title>
-                <GameContainer>
-                    <StartGame energy={energy} setEnergy={setEnergy}/>
-                </GameContainer>
-            </Container>
-        );
+    return(
+        <Container>
+            <Title>Gnomes's Life</Title>
+            <GameContainer>
+                <StartGame energy={energy} setEnergy={setEnergy}/>
+            </GameContainer>
+        </Container>
+    );
 };
 
 export default HomeScreen;

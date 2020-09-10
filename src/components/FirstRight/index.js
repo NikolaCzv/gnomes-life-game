@@ -35,7 +35,7 @@ const FirstRight = props => {
  return(  
     <Container>
         <Health>
-            Energy: {props.energy} 
+            Gnome's Energy: {props.energy} ❤️ 
         </Health>
         <QuestText>
             Oh, finally to meet someone after a rough night. There is an owl. She is sleeping. The owl 
