@@ -1,25 +1,30 @@
 import React, { useState } from "react";
-import { Container, QuestText, ButtonWrapper, Health } from '../style';
+import { Container, QuestText, ButtonWrapper, Health, GameOverImage } from '../style';
 import Button from '@material-ui/core/Button';
 import SnakeLeft from '../snakeLeft';
 import SnakeRight from '../snakeRight';
+import gameOver from '../../assets/game-over.jpg';
 
 const FirstLeft = (props) => {
 
     const [isLeft, setIsLeft] = useState(false);
-    const [isRight, setIsRight] = useState(false)
+    const [isRight, setIsRight] = useState(false);
 
-    const handleLeftButton = () => setIsLeft(true)
-    const handleRightButton = () => setIsRight(true)
+    const handleLeftButton = () => setIsLeft(true);
+    const handleRightButton = () => setIsRight(true);
 
     if(isRight)
         return <SnakeRight energy={props.energy}/>
       
     if(isLeft)
-        return <SnakeLeft energy={props.energy}/>
+        return <SnakeLeft energy={props.energy} setEnergy={props.setEnergy} />
 
     return(  
         <Container>
+            {props.energy <= 0 ?
+            <GameOverImage src={gameOver} />
+            :
+            <>
             <Health>
                 Gnome's Energy: {props.energy} ❤️
             </Health>
@@ -44,6 +49,8 @@ const FirstLeft = (props) => {
                         Right
                     </Button>
                 </ButtonWrapper>
+            </>
+}
         </Container>
  );
 };
