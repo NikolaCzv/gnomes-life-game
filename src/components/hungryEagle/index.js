@@ -1,40 +1,45 @@
 import React, { useState } from "react";
-import { Container, QuestText, ButtonWrapper, Health } from '../style';
+import { Container, QuestText, ButtonWrapper, Health, GameOverImage } from '../style';
 import Button from '@material-ui/core/Button';
+import gameOver from '../../assets/game-over.jpg';
 
 const HungryEagle = (props) => {
-    const [isFight, setIsFight] = useState(false);
-    const [isRun, setIsRun] = useState(false);
+    const [isDead, setIsDead] = useState(false);
     
-    const handleFightButton = () => setIsFight(true)
-    const handleRunButton = () => setIsRun(true) 
-    
+    const handleButton = () => setIsDead(true);
+
     return(  
     <Container>
-        <Health>
-            Energy: {props.energy} 
-        </Health>
-        <QuestText>
-          the gnome keeps falling, and falling, and then.. STOP. He gets grabed by an Eagle?! And its taking him to her childern!
-          As she drops him in, the childern getting hungry look at the gnome, quick choose!
-            
-        </QuestText>
-        <ButtonWrapper>
-            <Button
-            variant="contained" 
-            color="primary"
-            onClick={handleFightButton}
-            >
-            Fight!
-            </Button>
-            <Button
-            variant="contained" 
-            color="primary"
-            onClick={handleRunButton}
-            >
-                Run!
-            </Button>
-        </ButtonWrapper>
+        {isDead ?
+            <GameOverImage src={gameOver}/>
+        :
+        <>
+            <Health>
+                Gnome's Energy: {props.energy} ❤️
+            </Health>
+            <QuestText>
+            The gnome keeps falling, and falling, and then.. STOP. He gets grabed by an Eagle?! And its taking him to her childern!
+            As she drops him in the nest, the chicks getting hungry look at the gnome, quick choose!
+                
+            </QuestText>
+            <ButtonWrapper>
+                <Button
+                variant="contained" 
+                color="primary"
+                onClick={handleButton}
+                >
+                Fight!
+                </Button>
+                <Button
+                variant="contained" 
+                color="primary"
+                onClick={handleButton}
+                >
+                    Run!
+                </Button>
+            </ButtonWrapper>
+        </>
+    }
     </Container>
  );
 };
