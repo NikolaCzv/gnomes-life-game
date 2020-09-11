@@ -31,11 +31,11 @@ const FirstRight = props => {
     if(isScreem)
     return <OwlScreem energy={props.energy}/>
 
-      
- return(  
+
+ return(
     <Container>
         <Health>
-            Gnome's Energy: {props.energy} ❤️ 
+            Gnome's Energy: {props.energy} ❤️
         </Health>
         <QuestText>
             Oh, finally to meet someone after a rough night. There is an owl. She is sleeping. The owl 
@@ -68,6 +68,7 @@ const FirstRight = props => {
     </Container>
  );
 };
+
 
 
 export default FirstRight;

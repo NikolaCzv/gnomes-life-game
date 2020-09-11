@@ -22,3 +22,7 @@ export const ButtonWrapper = styled.div`
 export const Health = styled.div`
     font-size: 20px;
 `;
+export const GameOverImage = styled.img`
+    width: 100%;
+    height: 100%;
+`;
