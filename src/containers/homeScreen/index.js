@@ -6,7 +6,6 @@ import StartGame from '../../components/startGame';
 const HomeScreen = () => {
 
     const [energy, setEnergy] = useState(100);
-    const [rethink, setRethink] = useState(false);
 
     return(
         <Container>

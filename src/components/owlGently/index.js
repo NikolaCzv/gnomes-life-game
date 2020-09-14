@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, QuestText, Health, ButtonWrapper } from '../style';
 import Button from '@material-ui/core/Button';
+import Fox from '../fox';
 
 const OwlGently = props => {
+    const [isFox, setIsFox] = useState(false);
+
+    const handleFoxButton = () => {
+        setIsFox(true);
+    };
+
+    if(isFox)
+        return <Fox energy={props.energy}/>
 
     return (
         <Container>
@@ -18,6 +27,7 @@ const OwlGently = props => {
                 <Button
                     variant="contained" 
                     color="primary"
+                    onClick={handleFoxButton}
                 >
                     Find the Fox
                 </Button>

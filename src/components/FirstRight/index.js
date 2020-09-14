@@ -15,8 +15,10 @@ const FirstRight = props => {
         props.setEnergy(props.energy - 10);
     };
 
-    const handleStoneButton = () => setIsStone(true);
-
+    const handleStoneButton = () => {
+        setIsStone(true);
+        props.setEnergy(props.energy - 50);
+    }
     const handleScreemButton = () => {
         setIsScreem(true);
         props.setEnergy(props.energy - 30);

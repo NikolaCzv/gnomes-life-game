@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, QuestText, Health, ButtonWrapper } from '../style';
 import Button from '@material-ui/core/Button';
+import Fox from '../fox';
 
 const OwlStone = props => {
+    const [isLeft, setIsLeft] = useState(false);
+
+    const handleLeftButton = () => {
+        setIsLeft(true);
+    };
+
+    if(isLeft)
+        return <Fox energy={props.energy}/>
+
     return (
         <Container>
             <Health>
@@ -16,7 +26,7 @@ const OwlStone = props => {
                 <Button
                     variant="contained" 
                     color="primary"
-                    //going to the fox
+                    onClick={handleLeftButton}
                 >
                     Left Path
                 </Button>

@@ -1,3 +1,7 @@
+Game Description
+
+This is a short text based adventure game. The idea behid the game is to teach my teenage brother how to use react hooks, single page website, conditional randering and how to use styled components. It is funny, short game that you can try any time. :) We are still working on it and I hope we will have soon a Heroku link for the game so anyone can try it out.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
