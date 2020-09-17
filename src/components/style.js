@@ -26,3 +26,9 @@ export const GameOverImage = styled.img`
     width: 100%;
     height: 100%;
 `;
+export const DeathContainer = styled.div`
+    font-size: 24px;
+    width: 100%;
+    padding: 10px;
+    text-align-last: center;
+`;

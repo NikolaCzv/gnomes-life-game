@@ -18,7 +18,7 @@ const HungryEagle = (props) => {
                 Gnome's Energy: {props.energy} ❤️
             </Health>
             <QuestText>
-            The gnome keeps falling, and falling, and then.. STOP. He gets grabed by an Eagle?! And its taking him to her childern!
+            He gets grabed by an Eagle?! And its taking him to her childern!
             As she drops him in the nest, the chicks getting hungry look at the gnome, quick choose!
                 
             </QuestText>
