@@ -23,6 +23,20 @@ export const Health = styled.div`
     font-size: 20px;
 `;
 export const GameOverImage = styled.img`
+    width: 65%;
+    height: 70%;
+    border-radius: 20px;
+`;
+export const DeathText = styled.div`
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
+export const ImageWrapper = styled.div`
     width: 100%;
-    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
 `;
