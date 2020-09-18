@@ -31,14 +31,14 @@ const FirstScreen = props => {
             </QuestText>
             <ButtonWrapper>
                 <Button
-                    variant="contained" 
+                    variant="outlined" 
                     color="primary"
                     onClick={handleLeftButton}
                 >
                     Left
                 </Button>
                 <Button
-                    variant="contained" 
+                    variant="outlined" 
                     color="primary"
                     onClick={handleRightButton}
                 >

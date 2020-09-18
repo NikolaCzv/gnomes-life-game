@@ -24,14 +24,14 @@ const OwlStone = props => {
             </QuestText>
             <ButtonWrapper>
                 <Button
-                    variant="contained" 
+                    variant="outlined" 
                     color="primary"
                     onClick={handleLeftButton}
                 >
                     Left Path
                 </Button>
                 <Button
-                    variant="contained" 
+                    variant="outlined" 
                     color="primary"
                     //goes to the cave
                 >

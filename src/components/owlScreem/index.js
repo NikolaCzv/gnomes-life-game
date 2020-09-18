@@ -26,14 +26,14 @@ const OwlScreem = props => {
             </QuestText>
             <ButtonWrapper>
                 <Button
-                    variant="contained" 
+                    variant="outlined" 
                     color="primary"
                     onClick={handleFoxButton}
                 >
                     Find the Fox
                 </Button>
                 <Button
-                    variant="contained" 
+                    variant="outlined" 
                     color="primary"
                     //goes to the cave
                 >

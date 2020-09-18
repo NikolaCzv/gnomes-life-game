@@ -1,9 +1,31 @@
 import React, { useState } from "react";
-import { Container, QuestText, ButtonWrapper, Health } from '../style';
+import { Container, QuestText, ButtonWrapper, Health, } from '../style';
 import Button from '@material-ui/core/Button';
+import HungryEagle from "../hungryEagle";
+import FirstScreen from "../firstScreen";
+import gameOver from '../../assets/game-over.jpg';
+import DeathScreen from '../deathScreen';
 
-const snakeRight = props => {
+const SnakeRight = props => {
+    const [isWings, setisWings] = useState(false);
+    const [hatBack, setHatBack] = useState(false);
+    const [doubleEnergy, isDoubleEnergy] = useState(false);
+    const [powder, setIsPowder] = useState(false);
 
+   const handleWingButton = () => setisWings(true);
+    const handleHatButton = () => setHatBack(true); 
+    const handleEnergyButton = () => isDoubleEnergy(true);
+    const handlePowderButton = () => setIsPowder(true);
+
+    if (isWings)
+    return <HungryEagle energy={props.energy}/>
+    if (hatBack)
+    return <FirstScreen energy={props.energy - 99}/>
+    if (doubleEnergy)
+    return <FirstScreen energy={props.energy * 2}/>
+    if (powder)
+    return <DeathScreen/> 
+    
     return( 
         <Container>
             <Health>
@@ -15,26 +37,30 @@ const snakeRight = props => {
             </QuestText>
             <ButtonWrapper>
                 <Button
-                    variant="contained" 
+                    variant="outlined" 
                     color="primary"
+                    onClick={handleWingButton}
                 >
                     Wings!
                 </Button>
                 <Button
-                    variant="contained" 
+                    variant="outlined" 
                     color="primary"
+                    onClick={handleHatButton}
                     >
                         My Hat Back..
                 </Button>
                 <Button
-                    variant="contained" 
+                    variant="outlined" 
                     color="primary"
+                    onClick={handleEnergyButton}
                 >
                     More Energy PLS!
                 </Button>
                 <Button
-                    variant="contained" 
+                    variant="outlined" 
                     color="primary"
+                    onClick={handlePowderButton}
                 >
                     "Magic Powder"
                 </Button>
@@ -44,4 +70,4 @@ const snakeRight = props => {
  };
 
 
-export default snakeRight;
+export default SnakeRight;

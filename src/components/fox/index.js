@@ -25,14 +25,14 @@ const Fox = props => {
             </QuestText>
             <ButtonWrapper>
                 <Button
-                    variant='contained'
+                    variant='outlined'
                     color='primary'
                     onClick={handleRabbitButton}
                 >
                     Go at Rabbit's
                 </Button>
                 <Button
-                    variant='contained'
+                    variant='outlined'
                     color='primary'
                 >
                     Keep Going Thru the Forest

@@ -27,14 +27,14 @@ const StartGame = (props) => {
                         </QuestText>    
                         <ButtonWrapper>
                                 <Button 
-                                    variant="contained" 
+                                    variant="outlined" 
                                     color="secondary"
                                     onClick={handleNoButton}
                                 >
                                     No, Thanks
                                 </Button>
                                 <Button 
-                                    variant="contained" 
+                                    variant="outlined" 
                                     color="primary"
                                     onClick={handleYesButton}>
                                     Yes
@@ -48,7 +48,7 @@ const StartGame = (props) => {
                         </QuestText>
                         <ButtonWrapper>
                             <Button 
-                                variant="contained" 
+                                variant="outlined" 
                                 color="primary"
                                 onClick={handleJokeButton}
                             >
