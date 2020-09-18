@@ -22,14 +22,14 @@ const HungryEagle = (props) => {
             </QuestText>
             <ButtonWrapper>
                 <Button
-                variant="contained" 
+                variant="outlined" 
                 color="primary"
                 onClick={handleButton}
                 >
                 Fight!
                 </Button>
                 <Button
-                variant="contained" 
+                variant="outlined" 
                 color="primary"
                 onClick={handleButton}
                 >

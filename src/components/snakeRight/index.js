@@ -37,21 +37,21 @@ const SnakeRight = props => {
             </QuestText>
             <ButtonWrapper>
                 <Button
-                    variant="contained" 
+                    variant="outlined" 
                     color="primary"
                     onClick={handleWingButton}
                 >
                     Wings!
                 </Button>
                 <Button
-                    variant="contained" 
+                    variant="outlined" 
                     color="primary"
                     onClick={handleHatButton}
                     >
                         My Hat Back..
                 </Button>
                 <Button
-                    variant="contained" 
+                    variant="outlined" 
                     color="primary"
                     onClick={handleEnergyButton}
                 >

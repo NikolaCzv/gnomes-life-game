@@ -7,7 +7,7 @@ const DeathScreen = () => {
     return(
         <Container>
             <DeathText>
-                Oh no! looks like the gnome met his faith...shall we start a new adventure?
+                Oh no! Looks like the gnome met his faith... Shall we start a new adventure?
             </DeathText>
             <ImageWrapper>
                 <GameOverImage src={gameOver}/>

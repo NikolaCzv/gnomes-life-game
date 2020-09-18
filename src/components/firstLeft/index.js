@@ -35,14 +35,14 @@ const FirstLeft = (props) => {
             </QuestText>
             <ButtonWrapper>
                     <Button
-                        variant="contained" 
+                        variant="outlined" 
                         color="primary"
                         onClick={handleLeftButton}
                     >
                         Left
                     </Button>
                     <Button
-                        variant="contained" 
+                        variant='outlined' 
                         color="primary"
                         onClick={handleRightButton}
                     >
@@ -54,8 +54,6 @@ const FirstLeft = (props) => {
         </Container>
  );
 };
-// kod zmije levo = litica(skoci ili vrati se); desno = (reka nalazi stap i upeca zlatnu ribicu)
-// git add . || git commit -m "msg" || git push <- git pull da ga povratim 
 
 
 export default FirstLeft;

@@ -46,21 +46,21 @@ const FirstRight = props => {
         </QuestText>
         <ButtonWrapper>
             <Button
-                variant="contained" 
+                variant="outlined" 
                 color="primary"
                 onClick={handleGentlyButton}
             >
                 Gently
             </Button>
             <Button
-                variant="contained" 
+                variant="outlined" 
                 color="primary"
                 onClick={handleStoneButton}
             >
                 Throw a stone at her
             </Button>
             <Button
-                variant="contained" 
+                variant="outlined" 
                 color="primary"
                 onClick={handleScreemButton}
             >

@@ -28,14 +28,14 @@ const SnakeLeft = props => {
             </QuestText>
             <ButtonWrapper>
                         <Button
-                            variant="contained" 
+                            variant="outlined" 
                             color="primary"
                             onClick={handleJumpButton}
                         >
                             Jump!
                         </Button>
                         <Button
-                            variant="contained" 
+                            variant="outlined" 
                             color="primary"
                             onClick={handleThinkButton}
                         >
