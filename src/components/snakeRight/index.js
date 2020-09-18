@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Container, QuestText, ButtonWrapper, Health, } from '../style';
 import Button from '@material-ui/core/Button';
 import HungryEagle from "../hungryEagle";
-import FirstScreen from "../firstScreen"
+import FirstScreen from "../firstScreen";
 import gameOver from '../../assets/game-over.jpg';
-import DeathScreen from '../deathScreen'
+import DeathScreen from '../deathScreen';
 
 const SnakeRight = props => {
     const [isWings, setisWings] = useState(false);
@@ -12,18 +12,10 @@ const SnakeRight = props => {
     const [doubleEnergy, isDoubleEnergy] = useState(false);
     const [powder, setIsPowder] = useState(false);
 
-   const handleWingButton = () => {
-        setisWings(true);
-    };
-    const handleHatButton = () => {
-        setHatBack(true);
-    };
-    const handleEnergyButton = () => {
-        isDoubleEnergy(true);
-    };
-    const handlePowderButton = () => {
-        setIsPowder(true);
-    };
+   const handleWingButton = () => setisWings(true);
+    const handleHatButton = () => setHatBack(true); 
+    const handleEnergyButton = () => isDoubleEnergy(true);
+    const handlePowderButton = () => setIsPowder(true);
 
     if (isWings)
     return <HungryEagle energy={props.energy}/>
@@ -66,7 +58,7 @@ const SnakeRight = props => {
                     More Energy PLS!
                 </Button>
                 <Button
-                    variant="contained" 
+                    variant="outlined" 
                     color="primary"
                     onClick={handlePowderButton}
                 >

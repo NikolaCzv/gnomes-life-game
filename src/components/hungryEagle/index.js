@@ -1,26 +1,24 @@
 import React, { useState } from "react";
-import { Container, QuestText, ButtonWrapper, Health, GameOverImage } from '../style';
+import { Container, QuestText, ButtonWrapper, Health } from '../style';
 import Button from '@material-ui/core/Button';
-import gameOver from '../../assets/game-over.jpg';
-import DeathScreen from "../deathScreen"
+import DeathScreen from "../deathScreen";
 
 const HungryEagle = (props) => {
     const [isDead, setIsDead] = useState(false);
     
     const handleButton = () => setIsDead(true);
+    
+    if(isDead)
+        return <DeathScreen /> 
 
     return(  
     <Container>
-        {isDead ?
-            <DeathScreen/>
-        :
-        <>
             <Health>
                 Gnome's Energy: {props.energy} ❤️
             </Health>
             <QuestText>
-            He gets grabed by an Eagle?! And its taking him to her childern!
-            As she drops him in the nest, the chicks getting hungry look at the gnome, quick choose!
+                He gets grabed by an Eagle?! And its taking him to her childern!
+                As she drops him in the nest, the chicks getting hungry look at the gnome, quick choose!
             </QuestText>
             <ButtonWrapper>
                 <Button
@@ -38,8 +36,6 @@ const HungryEagle = (props) => {
                     Run!
                 </Button>
             </ButtonWrapper>
-        </>
-    }
     </Container>
  );
 };
