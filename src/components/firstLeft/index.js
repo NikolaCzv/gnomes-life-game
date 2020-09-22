@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import SnakeLeft from '../snakeLeft';
 import SnakeRight from '../snakeRight';
 import gameOver from '../../assets/game-over.jpg';
+import DeathScreen from '../deathScreen';
 
 const FirstLeft = (props) => {
 
@@ -13,6 +14,9 @@ const FirstLeft = (props) => {
     const handleLeftButton = () => setIsLeft(true);
     const handleRightButton = () => setIsRight(true);
 
+    if(props.energy <= 0)
+        return <DeathScreen />
+
     if(isRight)
         return <SnakeRight energy={props.energy}/>
       
@@ -21,10 +25,6 @@ const FirstLeft = (props) => {
 
     return(  
         <Container>
-            {props.energy <= 0 ?
-            <GameOverImage src={gameOver} />
-            :
-            <>
             <Health>
                 Gnome's Energy: {props.energy} ❤️
             </Health>
@@ -49,8 +49,6 @@ const FirstLeft = (props) => {
                         Right
                     </Button>
                 </ButtonWrapper>
-            </>
-}
         </Container>
  );
 };

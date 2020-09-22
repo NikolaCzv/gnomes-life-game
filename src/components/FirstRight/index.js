@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import OwlGently from '../owlGently';
 import OwlStone from '../owlStone';
 import OwlScreem from '../owlScreem';
+import DeathScreen from '../deathScreen';
 
 const FirstRight = props => {
     const [isGently, setIsGently] = useState(false);
@@ -24,14 +25,17 @@ const FirstRight = props => {
         props.setEnergy(props.energy - 30);
     };
 
+    if(props.energy <= 0)
+        return <DeathScreen />
+
     if(isGently)
-    return <OwlGently energy={props.energy}/>
+        return <OwlGently energy={props.energy}/>
 
     if(isStone)
-    return <OwlStone energy={props.energy}/>
+        return <OwlStone energy={props.energy}/>
 
     if(isScreem)
-    return <OwlScreem energy={props.energy}/>
+        return <OwlScreem energy={props.energy}/>
 
 
  return(

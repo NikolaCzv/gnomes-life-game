@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Container, QuestText, Health, ButtonWrapper } from '../style';
 import Button from '@material-ui/core/Button';
 import Fox from '../fox';
+import DeathScreen from '../deathScreen';
 
 const OwlStone = props => {
     const [isLeft, setIsLeft] = useState(false);
@@ -10,6 +11,8 @@ const OwlStone = props => {
         setIsLeft(true);
     };
 
+    if(props.energy <= 0)
+        return <DeathScreen />
     if(isLeft)
         return <Fox energy={props.energy}/>
 

@@ -26,7 +26,7 @@ const HungryEagle = (props) => {
                 color="primary"
                 onClick={handleButton}
                 >
-                Fight!
+                    Fight!
                 </Button>
                 <Button
                 variant="outlined" 

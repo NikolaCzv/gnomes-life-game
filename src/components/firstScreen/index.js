@@ -3,7 +3,7 @@ import { Container, QuestText, ButtonWrapper, Health } from '../style';
 import Button from '@material-ui/core/Button';
 import FirstLeft from '../firstLeft';
 import FirstRight from '../firstRight';
-
+import DeathScreen from '../deathScreen';
 
 const FirstScreen = props => {
     const [isLeft, setIsLeft] = useState(false);
@@ -13,7 +13,9 @@ const FirstScreen = props => {
 
     const handleRightButton = () => setIsRight(true);
     
-    
+    if(props.energy <= 0)
+        return <DeathScreen />
+
     if(isRight)
     return <FirstRight energy={props.energy} setEnergy={props.setEnergy}/>
       
