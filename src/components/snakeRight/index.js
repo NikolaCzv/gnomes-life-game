@@ -3,7 +3,6 @@ import { Container, QuestText, ButtonWrapper, Health, } from '../style';
 import Button from '@material-ui/core/Button';
 import HungryEagle from "../hungryEagle";
 import FirstScreen from "../firstScreen";
-import gameOver from '../../assets/game-over.jpg';
 import DeathScreen from '../deathScreen';
 
 const SnakeRight = props => {
@@ -12,19 +11,21 @@ const SnakeRight = props => {
     const [doubleEnergy, isDoubleEnergy] = useState(false);
     const [powder, setIsPowder] = useState(false);
 
-   const handleWingButton = () => setisWings(true);
+    const handleWingButton = () => setisWings(true);
     const handleHatButton = () => setHatBack(true); 
     const handleEnergyButton = () => isDoubleEnergy(true);
     const handlePowderButton = () => setIsPowder(true);
 
+    if(props.energy <= 0)
+        return <DeathScreen />
     if (isWings)
-    return <HungryEagle energy={props.energy}/>
+        return <HungryEagle energy={props.energy}/>
     if (hatBack)
-    return <FirstScreen energy={props.energy - 99}/>
+        return <FirstScreen energy={props.energy - 99}/>
     if (doubleEnergy)
-    return <FirstScreen energy={props.energy * 2}/>
+        return <FirstScreen energy={props.energy * 2}/>
     if (powder)
-    return <DeathScreen/> 
+        return <DeathScreen/> 
     
     return( 
         <Container>

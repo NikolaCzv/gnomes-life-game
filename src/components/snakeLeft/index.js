@@ -3,6 +3,7 @@ import { Container, QuestText, ButtonWrapper, Health } from '../style';
 import Button from '@material-ui/core/Button';
 import FirstLeft from '../firstLeft';
 import HungryEagle from "../hungryEagle";
+import DeathScreen from "../deathScreen";
  
 const SnakeLeft = props => {
     const [isJump, setIsJump] = useState(false);
@@ -12,6 +13,8 @@ const SnakeLeft = props => {
 
     const handleThinkButton = () => setIsThink(true);
     
+    if(props.energy <= 0)
+        return <DeathScreen />
     if (isthink)
         return <FirstLeft energy={props.energy - 20} />
     if (isJump)

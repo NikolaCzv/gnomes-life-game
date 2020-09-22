@@ -3,7 +3,8 @@ import { Container, GameContainer, Title } from './style';
 
 import StartGame from '../../components/startGame';
 
-const HomeScreen = () => {
+const HomeScreen = (props) => {
+    console.log(props.store)
 
     const [energy, setEnergy] = useState(100);
 
